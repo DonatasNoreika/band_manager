@@ -1,7 +1,0 @@
-<openerp>
-    <data>
-        <record id="group_manager" model="res.groups">
-            <field name="name">BandManager / Manager</field>
-        </record>
-    </data>
-</openerp>
