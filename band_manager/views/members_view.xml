@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+         <!--members form view-->
+        <record model="ir.ui.view" id="members_form_view">
+            <field name="name">members.form.inherit</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_simple_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='fax']" position="after">
+                        <field name="status"/>
+                        <field name="add_information"/>
+
+                        <group string="Abilities" col="1">
+                            <field name="abilities_ids"/>
+                        </group>
+
+                        <group string="Instruments and Equipment" col="1">
+                            <field name="instruments_ids"/>
+                        </group>
+                </xpath>
+            </field>
+        </record>
+
+        <!--members tree/list view-->
+        <record model="ir.ui.view" id="members_tree_view">
+            <field name="name">members.tree.inherit</field>
+            <field name="model">res.users</field>
+            <field name="arch" type="xml">
+                <tree string="Members Tree">
+                    <field name="name"/>
+                    <field name="abilities_ids"/>
+                    <field name="instruments_ids"/>
+                    <field name="status"/>
+                    <field name="add_information"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--members action view-->
+        <record model="ir.actions.act_window" id="members_action">
+            <field name="name">Members</field>
+            <field name="res_model">res.users</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the first member
+                </p>
+            </field>
+        </record>
+
+        <!-- members action menu -->
+        <menuitem id="members_menu" name="Members of Bands"
+              parent="lists_menu" sequence="11"
+              action="members_action"/>
+
+    </data>
+</openerp>

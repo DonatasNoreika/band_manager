@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <!-- setlists form view -->
+        <record model="ir.ui.view" id="setlists_form_view">
+            <field name="name">setlists.form</field>
+            <field name="model">manager.setlists</field>
+            <field name="arch" type="xml">
+                <form string="Songs Form">
+                    <sheet>
+                        <group string="General">
+                            <field name="name"/>
+                            <field name="band_id"/>
+                            <field name="for_rehearsal"/>
+                            <field name="for_show"/>
+                            <field name="required_duration" widget="float_time"/>
+                            <field name="duration_ir_percents" widget="progressbar"/>
+                            <field name="real_duration" widget="float_time"/>
+                            <field name="number_of_songs"/>
+                        </group>
+                        <group string="Songs manager">
+                            <field name="songs_ids">
+                                <tree string ="Printing order" etitable="bottom">
+                                    <field name="sequence" widget="handle"/>
+                                    <!--<field name="index"/>-->
+                                    <field name="name"/>
+                                    <field name="version_id"/>
+                                    <field name="band_id"/>
+                                    <field name="duration" widget="float_time" class="oe_inline"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- setlists tree/list view -->
+        <record model="ir.ui.view" id="setlists_tree_view">
+            <field name="name">setlists.tree</field>
+            <field name="model">manager.setlists</field>
+            <field name="arch" type="xml">
+                <tree string="Songs Tree">
+                    <field name="name"/>
+                    <field name="band_id"/>
+                    <field name="required_duration" widget="float_time"/>
+                    <field name="real_duration" widget="float_time"/>
+                    <field name="duration_ir_percents" widget="progressbar"/>
+                    <field name="number_of_songs"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--setlists action view-->
+        <record model="ir.actions.act_window" id="setlists_action">
+            <field name="name">Setlists</field>
+            <field name="res_model">manager.setlists</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the first setlist
+                </p>
+            </field>
+        </record>
+
+        <!-- setlists action menu -->
+        <menuitem id="setlists_menu" name="Setlists"
+              parent="lists_menu" sequence="50"
+              action="setlists_action"/>
+
+    </data>
+</openerp>
