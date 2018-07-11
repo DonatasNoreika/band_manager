@@ -3,7 +3,7 @@
     'name': "Band Manager",
     'summary': """This module allows to manage music bands""",
     'description': """
-    
+
 Band Manager is a solution for the music bands management for producers or band members.
 With this module you can:
 
