@@ -29,7 +29,7 @@ Icons made by Freepik (http://www.freepik.com) from www.flaticon.com (https://ww
     # for the full list
     'category': 'Project',
     'version': '1.2.1',
-    'images': ['static/images/main_screenshot.png', 'static/images/main_1.png', 'static/images/main_2.png', 'static/images/main_3.png', 'static/images/main_4.png', 'static/images/main_5.png', 'static/images/main_6.png'],
+    'images': ['static/images/main_screenshot.png', 'static/images/main_1.png', 'static/images/main_2.png', 'static/images/main_3.png', 'static/images/main_4.png', 'static/images/main_5.png', 'static/images/main_6.png', 'static/images/main_7.png'],
 
 
     # any module necessary for this one to work correctly
