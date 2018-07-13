@@ -14,6 +14,8 @@ With this module you can:
 5. Enter the band members with abilities, status and instruments.
 6. Print lyrics of the selected song.
 7. Print selected setlist of songs.
+
+TST
  
 Icons made by Freepik (http://www.freepik.com) from www.flaticon.com (https://www.flaticon.com/) is licensed by "Creative Commons BY 3.0" (http://creativecommons.org/licenses/by/3.0/).
                 
