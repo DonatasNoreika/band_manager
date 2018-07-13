@@ -22,6 +22,7 @@ Icons made by Freepik (http://www.freepik.com) from www.flaticon.com (https://ww
     'author': "Donatas Noreika",
     'support': 'programosjusuverslui@gmail.com',
     'website': "http://programosverslui.wordpress.com",
+    'license': 'AGPL-3',
     # 'website': "http://www.yourcompany.com",
 
     # Categories can be used to filter modules in modules listing
@@ -30,7 +31,6 @@ Icons made by Freepik (http://www.freepik.com) from www.flaticon.com (https://ww
     'category': 'Project',
     'version': '1.2.1',
     'images': ['static/images/main_screenshot.png', 'static/images/main_1.png', 'static/images/main_2.png', 'static/images/main_3.png', 'static/images/main_4.png', 'static/images/main_5.png', 'static/images/main_6.png', 'static/images/main_7.png'],
-
 
     # any module necessary for this one to work correctly
     'depends': ['base','product'],
